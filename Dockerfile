@@ -24,7 +24,6 @@ ENV NODE_ENV production
 
 # Invalidate cache if .nvmrc or .npmrc changes
 ONBUILD COPY .nvmrc .nvmrc
-ONBUILD COPY .npmrc .npmrc
 
 # Make nvm install node specified in .nvmrc
 ONBUILD ARG NPM_VERSION=6.1.0
