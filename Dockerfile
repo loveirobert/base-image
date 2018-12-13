@@ -14,7 +14,7 @@ RUN set -xe ; \
 
 CMD /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
 
-# ONBUILD COPY ./docker/supervisor.conf /etc/supervisor/conf.d/
+ONBUILD COPY ./supervisor.conf /etc/supervisor/conf.d/
 
 # Configure standard environment
 WORKDIR /root/app
